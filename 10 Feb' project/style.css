@@ -1,0 +1,155 @@
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+body {
+    background-color: #03032f;
+}
+
+/* header */
+header {
+    display: flex;
+    flex-direction: column;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+}
+nav ul {
+    display: flex;
+    gap: 20px;
+    color: #ffffff;
+    list-style: none;
+}
+nav ul .option-home {
+    background-color: #4d4dcc;
+    padding: 3px;
+    border-radius: 10px;
+}
+nav li {
+    cursor: pointer;
+}
+nav img {
+    display: none;
+}
+
+/* intro section */
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.intro-left {
+    display: flex;
+    flex-direction: column;
+}
+.intro-left .intro-line1 {
+    display: flex;
+    gap: 10px;
+    color: #ffffff;
+}
+.intro-left .intro-line1 img {
+    width: 25px;
+}
+.intro-left .intro-line2 {
+    display: flex;
+    flex-direction: column;
+}
+.intro-left .intro-line2 h1 {
+    color: #ffffff;
+}
+.intro-left .intro-line2 h2 {
+    color: #ffff00;
+}
+
+.intro-right img {
+    width: 400px;
+}
+
+
+/* project section */
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.project h1 {
+    text-align: center;
+    color: #ffffff;
+}
+.horizontal-divider {
+    height: 10px;
+    width: 200px;
+    background-color: blue;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.project-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 20px;
+}
+.project {
+    text-align: center;
+    color: #ffffff;
+}
+.project img {
+    width: 300px;
+}
+
+/* footer */
+.footer-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+footer h1 {
+    color: #ffffff;
+}
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.social-icon a img{
+    width: 25px;
+}
+
+/* media query */
+@media screen and (max-width: 860px) {
+    nav {
+        justify-content: flex-start;
+    }
+    nav img {
+        display: inline-block;
+        width: 20px;
+        cursor: pointer;
+    }
+    nav ul {
+        display: none;
+    }
+    .intro {
+        flex-direction: column;
+    }
+    .intro-right img {
+        width: 200px;
+    }
+    .project-list {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        column-gap: 20px;
+    }
+    .project img {
+        width: 250px;
+    }
+}
