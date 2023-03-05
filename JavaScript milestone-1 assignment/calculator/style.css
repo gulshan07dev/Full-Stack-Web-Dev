@@ -39,6 +39,21 @@ body {
     border: 2px solid #808080;
     box-shadow: 8px 0 8px #808080;
 }
+.box button {
+    width: 100%;
+    padding: 6px 10px;
+    font-size: 18px;
+    transition: .3s;
+    margin-top: 15px;
+    background-color: #008bdc;
+    border: none;
+    color: #ffffff;
+    border-radius: 5px;
+
+}
+.box button:hover {
+    transform: translateY(-4px);
+}
 label {
     font-size: 18px;
     margin-block: 15px;
