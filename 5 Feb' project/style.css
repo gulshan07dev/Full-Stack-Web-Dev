@@ -76,3 +76,42 @@ nav {
     margin-top: 50px;
     cursor: pointer;
 }
+@media (max-width: 1282px) {
+    .line {
+        visibility: collapse;
+    }
+    nav {
+        justify-content: space-between;
+        padding: 0 12px;
+    }
+    .menu {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 690px) {
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .logo img {
+        height: 15px;
+        width: 35px;
+        margin-bottom: -5px;
+    }
+    .menu {
+        gap: 15px;
+    }
+    .menu a {
+        font-size: 10px;
+        font-weight: 700;
+    }
+    .btn1 button {
+        padding: 4px 7px;
+        border-radius: 5px;
+        font-size: 11px;
+        font-weight: 700;
+    }
+}
