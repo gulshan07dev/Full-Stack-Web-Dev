@@ -1,0 +1,141 @@
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    max-width: 1440px;
+    background-color: #f5f5f5;
+    overflow: hidden;
+    margin: auto;
+}
+
+/* styling navigation menu */
+nav {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+/* styling logo */
+nav img {
+    width: 150px;
+}
+
+/* styling navigation menu links */
+nav .menu {
+    display: flex;
+    align-items: center;
+}
+
+nav .menu a {
+    text-decoration: none;
+    margin-right: 50px;
+    font-weight: 600;
+}
+nav .menu a:hover, nav .menu a:focus {
+    text-decoration: underline;
+    color: #20bc7e;
+}
+
+nav .menu a:last-child {
+    font-weight: 700;
+    color: #20bc7e;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* styling contact form */
+label {
+    cursor: pointer;
+}
+
+main {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-form {
+    height: 450px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #808080;
+    padding: 15px 25px;
+}
+.contact-form input {
+    width: 100%;
+    margin: 10px auto;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+}
+.contact-form h1 {
+    text-align: center;
+}
+.contact-form textarea {
+    border: none;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 6px 10px;
+    width: 100%;
+}
+.btn {
+    width: 90%;
+    margin: auto;
+    background-color: #20bc7e;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* media query */
+@media screen and (max-width: 1115px) {
+    nav {
+        height: 10vh;
+        padding: 0 20px;
+    }
+
+    nav img {
+        width: 80px;
+    }
+
+    nav .menu {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    nav .menu a {
+        margin-right: 0px;
+        font-weight: 500;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        padding: 0 5px;
+    }
+
+    nav .menu {
+        gap: 13px;
+    }
+
+    nav .menu a {
+        font-weight: 500;
+        font-size: 9px;
+    }
+
+    nav img {
+        width: 50px;
+    }
+}

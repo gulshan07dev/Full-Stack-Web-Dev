@@ -1,0 +1,96 @@
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    /* background: linear-gradient(to bottom, black, white, green, red, yellow, blue, black); */
+    background-color: rgb(255, 155, 25);
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    transform: translateY(-4px);
+}
+
+.flex {
+    display: flex;
+}
+
+
+.container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    height: 50vh;
+    width: 500px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #ffffff;
+}
+
+.container h1 {
+    font-size: 30px;
+    font-family: 600;
+    color: aliceblue;
+    text-shadow: blue 2px 2px;
+}
+
+#screen {
+    background-color: #ffffff;
+    height: 130px;
+    width: 130px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+#screen span {
+    font-size: 50px;
+}
+.container div:last-child {
+    width: 100%;
+    justify-content: space-between;
+}
+.container div:last-child button {
+    padding: 15px 20px;
+    font-size: 17px;
+    font-weight: 600;
+    border: none;
+    width: 48%;
+    color: #ffffff;
+}
+#decrement {
+    background: linear-gradient(to left, #e20000, #f40000, #ff0000, #ff0f0f, #ff3434);
+    border-bottom-left-radius: 15px;
+}
+#increment {
+    background: linear-gradient(to right, #007000, #00a900, #00bd00, #00ee00);
+    border-bottom-right-radius: 15px;
+}
+
+#clear {
+    padding: 10px;
+    background-color: #0069c0;
+    border: none;
+    font-size: 18px;
+    color: #ffffff;
+    border-radius: 25px;
+    width: 30%;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 95vw;
+    }
+}

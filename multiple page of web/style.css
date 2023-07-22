@@ -1,0 +1,230 @@
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    max-width: 1440px;
+    background-color: #f5f5f5;
+    overflow: hidden;
+    margin: auto;
+}
+
+/* styling navigation menu */
+nav {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+/* styling logo */
+nav img {
+    width: 150px;
+}
+
+/* styling navigation menu links */
+nav .menu {
+    display: flex;
+    align-items: center;
+}
+
+nav .menu a {
+    text-decoration: none;
+    margin-right: 50px;
+    font-weight: 600;
+}
+nav .menu a:hover, nav .menu a:focus {
+    text-decoration: underline;
+    color: #20bc7e;
+}
+
+nav .menu a:first-child {
+    font-weight: 700;
+    color: #20bc7e;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* styling hero section */
+.main-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+}
+
+.left-section {
+    width: 50%;
+    margin-left: 5%;
+    position: relative;
+}
+
+.right-section {
+    width: 50%;
+}
+
+.top-angle {
+    width: 25px;
+}
+
+.left-section h1 {
+    font-size: 70px;
+}
+
+.left-section p {
+    color: #7c7c7c;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.bottom-angle {
+    width: 25px;
+    position: absolute;
+    right: 25px;
+}
+
+.stethoscope {
+    position: absolute;
+    width: 90%;
+    top: -60px;
+    right: -25%;
+    z-index: -1;
+}
+
+.mouse {
+    position: absolute;
+    right: -30px;
+    bottom: 0;
+    width: 30px;
+}
+
+.left-section button {
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 40px;
+    background-color: #20bc7e;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/* styling right section */
+.green-box,
+.yellow-box {
+    position: absolute;
+    right: 0;
+}
+
+.green-box {
+    width: 35%;
+    bottom: 30px;
+}
+
+.yellow-box {
+    width: 30%;
+    bottom: 50px;
+}
+
+.doctor {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 90%;
+}
+
+/* media query */
+
+@media screen and (max-width: 1115px) {
+    nav {
+        height: 10vh;
+        padding: 0 20px;
+    }
+
+    nav img {
+        width: 80px;
+    }
+
+    nav .menu {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    nav .menu a {
+        margin-right: 0px;
+        font-weight: 500;
+    }
+
+    .left-section h1 {
+        font-size: 50px;
+    }
+    .left-section p {
+        font-size: 14px;
+        margin: 20px 0;
+        color: #5c5c5c;
+    }
+    .green-box {
+        width: 35%;
+        top: 80px;
+    }
+    
+    .yellow-box {
+        width: 30%;
+        top: 100px;
+    }
+    .doctor {
+        height: 50%;
+        top: 70px;
+    }
+    .left-section {
+        position: absolute;
+        top: 70px;
+        left: 5px;
+        z-index: 10;
+    }
+    .left-section button {
+        padding: 10px 30px;
+        border-radius: 30px;
+        font-size: 20px;
+        font-weight: 600;
+        width: 85vw;
+        margin: auto;
+        position: absolute;
+        top: 50vh;
+    }
+    .bottom-angle {
+        width: 25px;
+        position: absolute;
+        right: 30px;
+        top: 36vh;
+    }
+    .mouse {
+        display: none;
+    }
+}
+@media screen and (max-width: 600px) {
+    nav {
+        padding: 0 5px;
+    }
+    nav .menu {
+        gap: 13px;
+    }
+    nav .menu a {
+        font-weight: 500;
+        font-size: 9px;
+    }
+    nav img {
+        width: 50px;
+    }
+    .left-section h1 {
+        font-size: 25px;
+    }
+}

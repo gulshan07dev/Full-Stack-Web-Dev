@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* navigation bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    padding: 30px 100px;
+    /* margin-bottom: 100px; */
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-left: -270px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.btn1 button {
+    padding: 10px 15px;
+    background-color: rgba(51, 51, 183, 0.859);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+/* main section */
+.main-section {
+    display: flex;
+    padding: 0 100px;
+    justify-content: center;
+}
+
+.section-left {
+    width: 40%;
+    padding-top: 100px;
+}
+
+.section-left h1 {
+    font-size: 50px;
+    line-height: 55px;
+    color: #11113fdd;
+    font-family: 700;
+}
+
+.section-left p {
+    color: #202020;
+    opacity: 0.8;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.section-left h1 span {
+    color: #3535d1;
+}
+
+.section-left button {
+    padding: 11px 16px;
+    background-color: #3333b7db;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.section-right {
+    width: 50%;
+}
+
+.section-right img {
+    width: 600px;
+}
+
+@media (max-width: 1210px) {
+    nav {
+        height: 70px;
+        padding: 0px 5px;
+        justify-content: space-between;
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    .menu {
+        gap: 9px;
+        margin-left: 3px;
+        margin-right: 3px;
+        font-size: 9px;
+    }
+
+    .btn1 button {
+        padding: 5px 4px;
+        border-radius: 8px;
+        font-size: 11px;
+    }
+
+    .main-section {
+        flex-direction: column;
+        padding: 0 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .section-left {
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .section-right {
+        width: 100%;
+        text-align: center;
+        margin-top: -400px;
+        opacity: 0.5;
+        z-index: -1;
+    }
+
+    .section-right img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 415px) {
+    .section-right {
+        opacity: 0.4;
+    }
+}
