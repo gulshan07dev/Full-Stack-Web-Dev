@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWSKILLS - Blog App</title>
+    <!-- adding css -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- adding javascript -->
+    <script defer src="./script.js"></script>
+    <!-- adding font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="flex">
+        <div class="logo">
+            PWSKILLS <span>Blog App</span>
+        </div>
+        <div class="add-blog-btn" id="add-blog-btn">
+            <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="back-btn" id="back-btn" style="display: none;">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+    </nav>
+
+    <!-- blog section -->
+    <section id="blog-container" class="flex">
+    </section>
+
+    <!-- add blog section -->
+    <section id="overlay">
+        <div class="add-blog-section flex">
+            <header class="flex">
+                <h2>Create your blog</h2>
+                <span id="close-blog-btn"><i class="fa-solid fa-xmark"></i></span>
+            </header>
+            <form class="flex">
+                <input type="text" id="post-url" placeholder="Enter Blog Post URL: ">
+                <input type="text" id="blog-title" placeholder="Enter Blog Title: ">
+                <input type="text" id="blog-desc" placeholder="Enter Blog Description: ">
+                <textarea name="blog" id="main-blog" cols="30" rows="10" placeholder="write"></textarea>
+                <button id="create-blog-btn">Create Blog</button>
+            </form>
+        </div>
+    </section> 
+
+   
+</body>
+
+</html>

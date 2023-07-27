@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background: #ffffff;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+section {
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    width: 100%;
+    border: none;
+    padding: 7px;
+    font-size: 15px;
+    border-radius: 50px;
+    background: #ff4400f1;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #d33800
+}
+
+/* navbar */
+nav {
+    justify-content: space-between;
+    padding: 0 80px;
+    height: 65px;
+    width: 100vw;
+    background: #ffffffd8;
+    box-shadow: 0 6px 12px #00000011, 0 3px 9px #f5f5f5;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    backdrop-filter: blur(10px);
+}
+
+nav .logo {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #ff0000, #0000ffce, #ffa600ec);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+nav .logo span {
+    background: linear-gradient(to right, #ff0000ec, #4141c2d5, #ff7300);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav .add-blog-btn, nav #back-btn {
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #ff4400b0;
+    color: #ffffff;
+    transition: .3s;
+    cursor: pointer;
+}
+
+nav .add-blog:hover, nav #back-btn:hover {
+    background: #ff4500;
+}
+
+#back-btn {
+    display: none;
+    margin-right: 10px;
+}
+
+/* blog container */
+#blog-container {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 50px 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.blog {
+    max-width: 300px;
+    width: 100%;
+    height: 350px;
+    box-shadow: 0 3px 12px #0000001a;
+    padding: 15px;
+    border-radius: 10px;
+    gap: 10px;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog .image {
+    width: 100%;
+    height: 50%;
+}
+
+.blog .image img {
+    height: 100%;
+    width: 100%;
+}
+
+.blog .title {
+    width: 100%;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1f33e4e1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.blog .desc {
+    width: 100%;
+    padding: 3px;
+    font-size: 17px;
+    color: #000000a1;
+    font-weight: 500;
+    line-height: 16px;
+    font-family: 'Roboto', sans-serif;
+    height: 20%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.blog button {
+    width: 95%;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background: #ff44002a;
+    color: #ff3c00;
+}
+
+
+/* create blog section */
+#overlay {
+    min-height: 100vh;
+    width: 100vw;
+    background: #00000062;
+    position: absolute;
+    backdrop-filter: blur(2px);
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.1;
+    transition: opacity 0.8s, display 0.8s;
+    display: none;
+    z-index: 100;
+}
+
+#overlay.active-add-blog {
+    display: flex;
+    opacity: 1;
+}
+
+.add-blog-section {
+    max-width: 600px;
+    width: 95vw;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px #0000001e;
+    flex-direction: column;
+}
+
+
+.add-blog-section header {
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #00000036;
+}
+
+.add-blog-section header h2 {
+    font-size: 20px;
+    color: #2b2bd8;
+}
+
+#close-blog-btn {
+    cursor: pointer;
+}
+
+.add-blog-section form {
+    width: 100%;
+    padding: 15px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-blog-section form input,
+.add-blog-section form textarea {
+    width: 100%;
+    padding: 6px 7px;
+    border-radius: 7px;
+    border: 2px solid #00000017;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    background: #ffffffec;
+    transition: border 0.3s;
+}
+
+.add-blog-section form input:focus,
+.add-blog-section form textarea:focus {
+    border: 2px solid #1228f088;
+}
+
+.add-blog-section form textarea {
+    resize: none;
+
+}
+
+/* blog content- read */
+#blog-content {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 20px 3px;
+    background: #ffffff;
+    position: absolute;
+    top: 70px;
+    flex-direction: column;
+    gap: 30px;
+    z-index: 98;
+    /* display: none; */
+}
+
+#blog-content header {
+    width: 90%;
+    padding: 15px;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    background: #3838c9bb;
+    color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 2px 7px 14px #0000ff28;
+}
+
+#blog-content header .left-content {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 7px;
+}
+
+#blog-content header .left-content h2 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+#blog-content header .left-content h3 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 15px;
+}
+
+#blog-content header .right-content {
+    max-width: 400px;
+    width: 95%;
+    height: 200px;
+    padding: 10px;
+    background: #000000;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#blog-content header .right-content img {
+    height: 100%;
+    width: 100%;
+}
+
+#blog-content .main-content {
+    width: 90%;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 23px;
+    color: #000000b9;
+    word-spacing: 3.5px;
+    letter-spacing: 1px;
+}
+
+
+
+/* media query */
+@media screen and (max-width: 670px) {
+    nav {
+        padding: 0 30px;
+    }
+
+    #blog-container {
+        padding: 30px 10px;
+    }
+
+}
+
+
+@media screen and (max-width: 635px) {
+    nav .logo {
+        font-size: 20px;
+    }
+
+    #blog-container .blog {
+        max-width: 100%;
+        height: 350px;
+    }
+
+}
+
+@media screen and (max-width: 830px) {
+    #blog-content header {
+        flex-direction: column-reverse;
+        gap: 35px;
+        align-items: flex-start;
+        padding: 0 0 25px 0;
+        height: auto;
+    }
+
+    #blog-content header .left-content,
+    #blog-content header .right-content {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    #blog-content header .left-content {
+        padding-left: 10px;
+    }
+
+    #blog-content header .right-content {
+        height: 200px;
+        max-height: 300px;
+    }
+
+}
