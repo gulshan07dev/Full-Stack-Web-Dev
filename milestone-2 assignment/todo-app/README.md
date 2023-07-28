@@ -10,7 +10,7 @@ The Simple Todo Web App is a basic web application built with React that allows 
 
 ## Demo
 
-You can try out the [Blog App Demo]() here.
+You can try out the [Todo App Demo](https://todo-app-gulshan07dev.vercel.app/) here.
 
 ## Screenshots
 
