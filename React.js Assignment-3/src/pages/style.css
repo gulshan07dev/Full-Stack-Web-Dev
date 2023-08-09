@@ -1,0 +1,54 @@
+section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px; 
+    justify-content: center;
+}
+
+section a {
+    flex-basis: 300px;
+    border-radius: 10px;
+    overflow: hidden; 
+    flex-shrink: 1;
+}
+
+section a img {
+    width: 100%;
+}
+
+.photo-details {
+    width: 90%;
+    margin: 100px auto;
+    border-radius: 5px;
+    background: #1a1a5f;
+    display: flex;
+    justify-content: space-between;
+    padding: 45px 15px;
+    color: #ffffff;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.photo-details img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+}
+
+.photo-details div {
+    width: 60%;
+}
+
+.photo-details h2, .photo-details p {
+    font-size: 40px;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+}
+
+.photo-details p {
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0.8;
+}
